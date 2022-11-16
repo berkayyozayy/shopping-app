@@ -10,5 +10,27 @@
         <button (click)="onSortUpdated('asc')" mat-menu-item>asc</button>
       </mat-menu>
     </div>
+    <div class="flex items-center">
+      <div>
+        <button mat-button [matMenuTriggerFor]="menu">
+          Show {{ itemsShowCount }}
+          <mat-icon>expand_more</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button (click)="onItemsUpdated(10)" mat-menu-item>10</button>
+          <button (click)="onItemsUpdated(20)" mat-menu-item>20</button>
+          <button (click)="onItemsUpdated(30)" mat-menu-item>30</button>
+        </mat-menu>
+      </div>
+      <button>
+        <mat-icon>view_list</mat-icon>
+      </button>
+      <button>
+        <mat-icon>view_module</mat-icon>
+      </button>
+      <button>
+        <mat-icon>view_comfy</mat-icon>
+      </button>
+    </div>
   </div>
 </mat-card>
