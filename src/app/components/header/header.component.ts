@@ -29,4 +29,8 @@ export class HeaderComponent   {
     return this.cartService.getTotal(items)
   }
 
+  onClearCart() {
+    this.cartService.clearCart()
+  }
+
 }
