@@ -22,7 +22,6 @@ export class HomeComponent implements OnInit {
   onColumnsCountChange(colsNum: number) {
     this.cols = colsNum;
     this.rowHeight = ROWS_HEIGHT[this.cols]
-    console.log('rowHeight ',this.rowHeight);
   }
   onShowCategory(newCategory: string): void {
     this.category = newCategory;
