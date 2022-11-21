@@ -18,8 +18,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.cartService.cart.subscribe((_cart) => {
-      console.log(_cart)
       this.cart = _cart;
+      console.log('____Cart', _cart)
+      // localStorage.setItem('cart items', JSON.stringify(_cart));
     })
   }
 }
